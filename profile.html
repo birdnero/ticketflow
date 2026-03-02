@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Edit your own TicketFlow profile settings.">
+  <title>TicketFlow | My Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-body">
+  <!-- site header -->
+  <header class="site-header">
+    <div class="content-wrap header-row">
+      <a class="site-brand" href="index.html">
+        <img class="brand-logo" src="assets/ticket-wave.svg" alt="TicketFlow logo">
+        <span class="brand-name">ticketflow</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul class="main-menu">
+          <li><a class="menu-link" href="login.html">login</a></li>
+          <li><a class="menu-link is-active" href="profile.html">profile</a></li>
+          <li><a class="menu-link" href="events.html">events</a></li>
+          <li><a class="menu-link" href="reservations.html">reservations</a></li>
+          <li><a class="menu-link" href="logout.html">logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="content-wrap stack-block">
+      <!-- hero block -->
+      <section class="page-hero" aria-labelledby="users-title">
+        <div>
+          <p class="accent-chip">personal settings</p>
+          <h1 id="users-title" class="page-title">Edit My Profile</h1>
+          <p class="page-subtitle">Update your own account details and security preferences. This page edits only your profile.</p>
+        </div>
+      </section>
+
+      <section class="screen-grid" aria-label="Profile editing workspace">
+        <article class="screen-card span-8 stack-block">
+          <div class="card-head">
+            <div>
+              <h2 class="section-title">Profile details</h2>
+              <p class="card-text">Update your own contact information and password.</p>
+            </div>
+            <span class="status-badge is-paid">vip</span>
+          </div>
+
+          <form class="form-grid" action="#" method="post" novalidate>
+            <div class="form-field">
+              <label class="field-label" for="profile-display-name">display name</label>
+              <input class="form-control" id="profile-display-name" name="profile-display-name" type="text" value="Anna Kovalenko">
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="profile-username">username</label>
+              <input class="form-control" id="profile-username" name="profile-username" type="text" value="anna_admin">
+            </div>
+
+            <div class="form-field span-2">
+              <label class="field-label" for="profile-email">email</label>
+              <input class="form-control" id="profile-email" name="profile-email" type="email" value="anna@ticketflow.app">
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="profile-phone">phone</label>
+              <input class="form-control" id="profile-phone" name="profile-phone" type="tel" value="+380 67 123 45 67">
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="profile-language">language</label>
+              <select class="form-control" id="profile-language" name="profile-language">
+                <option selected>English</option>
+                <option>Ukrainian</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="profile-current-password">current password</label>
+              <input class="form-control" id="profile-current-password" name="profile-current-password" type="password" placeholder="••••••••">
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="profile-new-password">new password</label>
+              <input class="form-control" id="profile-new-password" name="profile-new-password" type="password" placeholder="••••••••">
+            </div>
+
+            <div class="form-field span-2">
+              <label class="field-label" for="profile-confirm-password">confirm new password</label>
+              <input class="form-control" id="profile-confirm-password" name="profile-confirm-password" type="password" placeholder="••••••••">
+              <span class="form-help">Leave password fields empty if you do not want to change your password.</span>
+            </div>
+
+            <div class="form-field span-2 action-row">
+              <button class="btn btn-primary" type="submit">save profile</button>
+              <a class="btn btn-secondary" href="index.html">cancel</a>
+            </div>
+          </form>
+        </article>
+
+        <aside class="screen-card span-4 stack-block">
+          <h2 class="section-title">My account</h2>
+          <ul class="data-points">
+            <li class="data-point"><span class="data-point-key">user id</span><span class="data-point-value">u-1001</span></li>
+            <li class="data-point"><span class="data-point-key">role</span><span class="data-point-value"><span class="status-badge is-admin">admin</span></span></li>
+            <li class="data-point"><span class="data-point-key">member since</span><span class="data-point-value">2026-02-02</span></li>
+            <li class="data-point"><span class="data-point-key">last login</span><span class="data-point-value">2026-02-24 10:05</span></li>
+          </ul>
+
+          <div class="alert-stack">
+            <div class="alert is-success">
+              <p class="alert-title">Profile saved</p>
+              <p class="alert-text">Your personal settings were updated successfully.</p>
+            </div>
+            <div class="alert is-error">
+              <p class="alert-title">Password update failed</p>
+              <p class="alert-text">The confirmation password does not match the new password.</p>
+            </div>
+          </div>
+        </aside>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- site footer -->
+  <footer class="app-footer">
+    <div class="content-wrap">TicketFlow Account · Personal Profile Settings</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+$color-bg: #f4f6f1;
+$color-bg-deep: #dce6d4;
+$color-surface: #ffffff;
+$color-surface-soft: #edf2e7;
+$color-border: #ced7c3;
+$color-brand: #0f6b60;
+$color-brand-dark: #0b544c;
+$color-brand-soft: #d5ece8;
+$color-accent: #d96324;
+$color-warning: #b33b2e;
+$color-success: #1f7c45;
+$color-info: #2f6da6;
+$color-text: #1a2424;
+$color-text-muted: #5b6868;
+$color-shadow: rgba(20, 38, 33, 0.15);
+
+$font-main: 'Manrope', sans-serif;
+$font-display: 'Bebas Neue', sans-serif;
+
+$radius-small: 8px;
+$radius-medium: 12px;
+$radius-large: 18px;
+$radius-pill: 999px;
+
+$space-1: 8px;
+$space-2: 12px;
+$space-3: 16px;
+$space-4: 24px;
+$space-5: 32px;
+$space-6: 48px;
+
+$shadow-card: 0 14px 40px $color-shadow;
+$transition-fast: 180ms ease;
+$transition-medium: 260ms ease;
+
+$breakpoint-tablet: 920px;
+$breakpoint-mobile: 640px;

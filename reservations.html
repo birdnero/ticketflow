@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="User reservations and purchase status.">
+  <title>TicketFlow | Reservations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-body">
+  <!-- site header -->
+  <header class="site-header">
+    <div class="content-wrap header-row">
+      <a class="site-brand" href="index.html">
+        <img class="brand-logo" src="assets/ticket-wave.svg" alt="TicketFlow logo">
+        <span class="brand-name">ticketflow</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul class="main-menu">
+          <li><a class="menu-link" href="login.html">login</a></li>
+          <li><a class="menu-link" href="profile.html">profile</a></li>
+          <li><a class="menu-link" href="events.html">events</a></li>
+          <li><a class="menu-link is-active" href="reservations.html">reservations</a></li>
+          <li><a class="menu-link" href="checkout.html">checkout</a></li>
+          <li><a class="menu-link" href="logout.html">logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="content-wrap stack-block">
+      <!-- reservations hero -->
+      <section class="page-hero" aria-labelledby="reservations-title">
+        <div>
+          <p class="accent-chip">my tickets</p>
+          <h1 class="page-title" id="reservations-title">My Reservations</h1>
+          <p class="page-subtitle">Track active holds and completed purchases, then pay or cancel before the reservation timer expires.</p>
+        </div>
+      </section>
+
+      <section class="screen-grid" aria-label="Reservation list">
+        <!-- reservation timeline -->
+        <article class="screen-card span-8 stack-block">
+          <h2 class="section-title">Reservation list</h2>
+          <ul class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-top">
+                <h3 class="timeline-title">Rock Wave 2026 · seat A-12</h3>
+                <span class="status-badge is-reserved">reserved</span>
+              </div>
+              <p class="timeline-meta">hold until 2026-02-24 10:30 · price 790 ₴</p>
+              <div class="action-row">
+                <a class="btn btn-primary" href="checkout.html">buy now</a>
+                <button class="btn btn-danger" type="button">cancel</button>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-top">
+                <h3 class="timeline-title">Jazz Evening · seat B-07</h3>
+                <span class="status-badge is-paid">paid</span>
+              </div>
+              <p class="timeline-meta">paid at 2026-02-23 18:15 · order tf-8122</p>
+              <div class="action-row">
+                <button class="btn btn-secondary" type="button">download ticket</button>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-top">
+                <h3 class="timeline-title">Tech Meetup Live · seat C-05</h3>
+                <span class="status-badge is-cancelled">cancelled</span>
+              </div>
+              <p class="timeline-meta">cancelled by user at 2026-02-22 16:09</p>
+            </li>
+          </ul>
+        </article>
+
+        <!-- side summary -->
+        <aside class="screen-card span-4 stack-block">
+          <h2 class="section-title">Summary</h2>
+          <ul class="data-points">
+            <li class="data-point"><span class="data-point-key">active reservations</span><span class="data-point-value">1</span></li>
+            <li class="data-point"><span class="data-point-key">paid tickets</span><span class="data-point-value">1</span></li>
+            <li class="data-point"><span class="data-point-key">cancelled</span><span class="data-point-value">1</span></li>
+          </ul>
+          <div class="alert-stack">
+            <div class="alert is-error">
+              <p class="alert-title">Reservation expired</p>
+              <p class="alert-text">Seat A-12 was released because the payment window ended. Reserve it again to continue.</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <!-- site footer -->
+  <footer class="app-footer">
+    <div class="content-wrap">TicketFlow Wallet · Reservation and Purchase Management</div>
+  </footer>
+</body>
+</html>

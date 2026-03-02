@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Events catalog for ticket booking service.">
+  <title>TicketFlow | Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-body">
+  <!-- site header -->
+  <header class="site-header">
+    <div class="content-wrap header-row">
+      <a class="site-brand" href="index.html">
+        <img class="brand-logo" src="assets/ticket-wave.svg" alt="TicketFlow logo">
+        <span class="brand-name">ticketflow</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul class="main-menu">
+          <li><a class="menu-link" href="login.html">login</a></li>
+          <li><a class="menu-link" href="profile.html">profile</a></li>
+          <li><a class="menu-link is-active" href="events.html">events</a></li>
+          <li><a class="menu-link" href="event-ticket.html">ticket map</a></li>
+          <li><a class="menu-link" href="reservations.html">reservations</a></li>
+          <li><a class="menu-link" href="logout.html">logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="content-wrap stack-block">
+      <!-- events hero -->
+      <section class="page-hero" aria-labelledby="events-title">
+        <div>
+          <p class="accent-chip">live events marketplace</p>
+          <h1 id="events-title" class="page-title">Discover Events</h1>
+          <p class="page-subtitle">Browse concerts and experiences, then move directly to seat selection for purchase or reservation.</p>
+        </div>
+      </section>
+
+      <section class="events-grid" aria-label="Event catalog">
+        <!-- event card 1 -->
+        <article class="event-card">
+          <div class="event-banner"></div>
+          <div class="event-body stack-block">
+            <h2 class="event-title">Rock Wave 2026</h2>
+            <p class="event-meta">Arena Lviv · 2026-03-12 · 19:00</p>
+            <ul class="info-chip-list">
+              <li class="info-chip">available: 56</li>
+              <li class="info-chip">reserved: 12</li>
+            </ul>
+            <a class="btn btn-primary" href="event-ticket.html">view seats</a>
+          </div>
+        </article>
+
+        <!-- event card 2 -->
+        <article class="event-card">
+          <div class="event-banner"></div>
+          <div class="event-body stack-block">
+            <h2 class="event-title">Jazz Evening</h2>
+            <p class="event-meta">Opera Hall · 2026-03-18 · 20:00</p>
+            <ul class="info-chip-list">
+              <li class="info-chip">available: 22</li>
+              <li class="info-chip">reserved: 18</li>
+            </ul>
+            <a class="btn btn-primary" href="event-ticket.html">view seats</a>
+          </div>
+        </article>
+
+        <!-- event card 3 -->
+        <article class="event-card">
+          <div class="event-banner"></div>
+          <div class="event-body stack-block">
+            <h2 class="event-title">Tech Meetup Live</h2>
+            <p class="event-meta">Forum Center · 2026-04-02 · 18:30</p>
+            <ul class="info-chip-list">
+              <li class="info-chip">available: 75</li>
+              <li class="info-chip">reserved: 5</li>
+            </ul>
+            <a class="btn btn-primary" href="event-ticket.html">view seats</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- anti-conflict rule block -->
+      <section class="rule-card" aria-label="Booking policy">
+        <h2 class="rule-title">Single Seat Ownership Rule</h2>
+        <p class="rule-text">Each seat can have only one active state: `available`, `reserved`, or `sold`. Duplicate reservation or purchase attempts are blocked.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- site footer -->
+  <footer class="app-footer">
+    <div class="content-wrap">TicketFlow Events · Explore, Select, and Book</div>
+  </footer>
+</body>
+</html>

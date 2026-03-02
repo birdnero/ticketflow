@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Information about selected user.">
+  <title>TicketFlow | User Info</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-body">
+  <!-- site header -->
+  <header class="site-header">
+    <div class="content-wrap header-row">
+      <a class="site-brand" href="index.html">
+        <img class="brand-logo" src="assets/ticket-wave.svg" alt="TicketFlow logo">
+        <span class="brand-name">ticketflow</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul class="main-menu">
+          <li><a class="menu-link" href="login.html">login</a></li>
+          <li><a class="menu-link is-active" href="profile.html">profile</a></li>
+          <li><a class="menu-link" href="events.html">events</a></li>
+          <li><a class="menu-link" href="reservations.html">reservations</a></li>
+          <li><a class="menu-link" href="logout.html">logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="content-wrap stack-block">
+      <!-- selected user information -->
+      <section class="page-hero" aria-labelledby="user-title">
+        <div>
+          <p class="accent-chip">selected user</p>
+          <h1 class="page-title" id="user-title">anna_admin</h1>
+          <p class="page-subtitle">View account details, role permissions, and recent actions across the ticketing platform.</p>
+        </div>
+      </section>
+
+      <section class="screen-grid" aria-label="User details">
+        <article class="screen-card span-6 stack-block">
+          <h2 class="section-title">User profile</h2>
+          <ul class="data-points">
+            <li class="data-point"><span class="data-point-key">id</span><span class="data-point-value">u-1001</span></li>
+            <li class="data-point"><span class="data-point-key">role</span><span class="data-point-value"><span class="status-badge is-admin">admin</span></span></li>
+            <li class="data-point"><span class="data-point-key">email</span><span class="data-point-value">anna@ticketflow.app</span></li>
+            <li class="data-point"><span class="data-point-key">created at</span><span class="data-point-value">2026-02-02</span></li>
+            <li class="data-point"><span class="data-point-key">last login</span><span class="data-point-value">2026-02-24 10:05</span></li>
+          </ul>
+          <div class="action-row">
+            <a class="btn btn-secondary" href="profile.html">back to profile</a>
+            <a class="btn btn-primary" href="user-edit.html">edit user</a>
+            <button class="btn btn-danger" type="button">delete user</button>
+          </div>
+        </article>
+
+        <article class="screen-card span-6 stack-block">
+          <h2 class="section-title">Recent activity</h2>
+          <ul class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-top">
+                <h3 class="timeline-title">Created event "Rock Wave"</h3>
+                <span class="status-badge is-paid">done</span>
+              </div>
+              <p class="timeline-meta">2026-02-24 09:42 · admin action</p>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-top">
+                <h3 class="timeline-title">Approved reservation `rw-a-12`</h3>
+                <span class="status-badge is-reserved">verified</span>
+              </div>
+              <p class="timeline-meta">2026-02-24 09:20 · payment gateway</p>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-top">
+                <h3 class="timeline-title">Updated role for `mark_user`</h3>
+                <span class="status-badge is-cancelled">audit</span>
+              </div>
+              <p class="timeline-meta">2026-02-23 17:10 · security log</p>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- site footer -->
+  <footer class="app-footer">
+    <div class="content-wrap">TicketFlow Admin · User Profile and Activity Intelligence</div>
+  </footer>
+</body>
+</html>

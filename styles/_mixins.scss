@@ -1,0 +1,50 @@
+@use 'variables' as v;
+
+@mixin card {
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-large;
+  box-shadow: v.$shadow-card;
+}
+
+@mixin focus-ring {
+  outline: 3px solid v.$color-brand-soft;
+  outline-offset: 2px;
+}
+
+@mixin button-base($bg-color, $text-color, $border-color) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$space-1;
+  border: 1px solid $border-color;
+  border-radius: v.$radius-pill;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  background-color: $bg-color;
+  color: $text-color;
+  transition: transform v.$transition-fast, box-shadow v.$transition-fast,
+    background-color v.$transition-fast;
+}
+
+@mixin notification($left-color) {
+  border-left: 4px solid $left-color;
+  background-color: v.$color-surface;
+  border-radius: v.$radius-medium;
+  padding: v.$space-2 v.$space-3;
+}
+
+@mixin respond-tablet {
+  @media (max-width: v.$breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin respond-mobile {
+  @media (max-width: v.$breakpoint-mobile) {
+    @content;
+  }
+}

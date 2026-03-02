@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign in to TicketFlow to reserve seats, complete checkout, and manage your ticket activity.">
+  <title>TicketFlow | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-body">
+  <!-- site header -->
+  <header class="site-header">
+    <div class="content-wrap header-row">
+      <a class="site-brand" href="index.html">
+        <img class="brand-logo" src="assets/ticket-wave.svg" alt="TicketFlow logo">
+        <span class="brand-name">ticketflow</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul class="main-menu">
+          <li><a class="menu-link is-active" href="login.html">login</a></li>
+          <li><a class="menu-link" href="profile.html">profile</a></li>
+          <li><a class="menu-link" href="events.html">events</a></li>
+          <li><a class="menu-link" href="reservations.html">reservations</a></li>
+          <li><a class="menu-link" href="logout.html">logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="content-wrap login-page-wrap">
+      <div class="alert-stack login-error-floating" role="status" aria-live="polite">
+        <div class="alert is-error">
+          <p class="alert-title">Unable to sign in</p>
+          <p class="alert-text">The username or password is incorrect. Please try again.</p>
+        </div>
+      </div>
+
+      <div class="login-panel-grid">
+        <!-- login form -->
+        <section class="login-layout" aria-labelledby="login-title">
+          <article class="login-card">
+            <h1 id="login-title" class="login-title">Welcome Back</h1>
+            <p class="login-note">Sign in to continue booking and managing event tickets.</p>
+
+            <form class="form-grid" action="#" method="post" novalidate>
+              <div class="form-field span-2">
+                <label class="field-label" for="login-username">username</label>
+                <input class="form-control" id="login-username" name="username" type="text" placeholder="anna_admin" autocomplete="username">
+              </div>
+
+              <div class="form-field span-2">
+                <label class="field-label" for="login-password">password</label>
+                <input class="form-control" id="login-password" name="password" type="password" placeholder="••••••••" autocomplete="current-password">
+                <span class="form-error">Password is too short. Use at least 8 characters.</span>
+              </div>
+
+              <div class="form-field span-2 action-row">
+                <button class="btn btn-primary" type="submit">sign in</button>
+                <a class="btn btn-secondary" href="index.html">back to home</a>
+              </div>
+            </form>
+
+            <p class="auth-divider">demo access</p>
+            <ul class="info-chip-list" aria-label="Demo roles">
+              <li class="info-chip">admin: `anna_admin`</li>
+              <li class="info-chip">regular: `mark_user`</li>
+            </ul>
+          </article>
+        </section>
+
+        <aside class="dialog-box login-create-user" aria-labelledby="create-user-title">
+          <div class="dialog-top">
+            <h2 class="login-create-title" id="create-user-title">Create new account</h2>
+            <a class="dialog-close" href="#" aria-label="Close create user dialog">×</a>
+          </div>
+
+          <form class="form-grid login-create-form" action="#" method="post" novalidate>
+            <div class="form-field span-2">
+              <label class="field-label" for="create-username">Username</label>
+              <input class="form-control" id="create-username" name="create-username" type="text" placeholder="new_user">
+            </div>
+
+            <div class="form-field span-2">
+              <label class="field-label" for="create-password">Password</label>
+              <input class="form-control" id="create-password" name="create-password" type="password" placeholder="••••••••">
+            </div>
+
+            <div class="form-field span-2">
+              <label class="field-label" for="create-confirm-password">Confirm password</label>
+              <input class="form-control" id="create-confirm-password" name="create-confirm-password" type="password" placeholder="••••••••">
+            </div>
+
+            <div class="form-field span-2">
+              <label class="field-label" for="create-role">Role</label>
+              <select class="form-control" id="create-role" name="create-role">
+                <option>regular</option>
+                <option>admin</option>
+              </select>
+            </div>
+
+            <div class="form-field span-2 action-row">
+              <button class="btn btn-primary" type="submit">Ok</button>
+              <button class="btn btn-secondary" type="button">Cancel</button>
+            </div>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- site footer -->
+  <footer class="app-footer">
+    <div class="content-wrap">TicketFlow Access · Fast, Secure Sign-In</div>
+  </footer>
+</body>
+</html>

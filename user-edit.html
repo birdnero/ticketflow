@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Edit user screen.">
+  <title>TicketFlow | Edit User</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-body">
+  <!-- site header -->
+  <header class="site-header">
+    <div class="content-wrap header-row">
+      <a class="site-brand" href="index.html">
+        <img class="brand-logo" src="assets/ticket-wave.svg" alt="TicketFlow logo">
+        <span class="brand-name">ticketflow</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul class="main-menu">
+          <li><a class="menu-link" href="login.html">login</a></li>
+          <li><a class="menu-link is-active" href="profile.html">profile</a></li>
+          <li><a class="menu-link" href="events.html">events</a></li>
+          <li><a class="menu-link" href="reservations.html">reservations</a></li>
+          <li><a class="menu-link" href="logout.html">logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="content-wrap stack-block">
+      <!-- edit user form -->
+      <section class="page-hero" aria-labelledby="edit-title">
+        <div>
+          <p class="accent-chip">edit mode</p>
+          <h1 id="edit-title" class="page-title">Edit user: mark_user</h1>
+          <p class="page-subtitle">Update user profile settings with real-time validation and operational notifications.</p>
+        </div>
+      </section>
+
+      <section class="screen-grid" aria-label="Edit form">
+        <article class="screen-card span-8 stack-block">
+          <h2 class="section-title">Edit user screen</h2>
+
+          <form class="form-grid" action="#" method="post" novalidate>
+            <div class="form-field">
+              <label class="field-label" for="edit-username">username</label>
+              <input class="form-control" id="edit-username" name="edit-username" type="text" value="mark_user">
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="edit-role">role</label>
+              <select class="form-control" id="edit-role" name="edit-role">
+                <option selected>regular</option>
+                <option>admin</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="edit-password">new password</label>
+              <input class="form-control" id="edit-password" name="edit-password" type="password" placeholder="••••••••">
+              <span class="form-help">Leave blank if no password change is required.</span>
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="edit-confirm">confirm password</label>
+              <input class="form-control" id="edit-confirm" name="edit-confirm" type="password" placeholder="••••••••">
+              <span class="form-error">Confirmation password does not match the new password.</span>
+            </div>
+
+            <div class="form-field span-2 action-row">
+              <button class="btn btn-primary" type="submit">save changes</button>
+              <a class="btn btn-secondary" href="user-info.html">cancel</a>
+            </div>
+          </form>
+        </article>
+
+        <aside class="screen-card span-4 stack-block">
+          <h2 class="section-title">Notifications</h2>
+          <div class="alert-stack">
+            <div class="alert is-error">
+              <p class="alert-title">Username already taken</p>
+              <p class="alert-text">This username is already in use. Choose another one to save changes.</p>
+            </div>
+            <div class="alert is-success">
+              <p class="alert-title">Success notification</p>
+              <p class="alert-text">Profile updated successfully.</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <!-- site footer -->
+  <footer class="app-footer">
+    <div class="content-wrap">TicketFlow Admin · Profile Editing and Data Validation</div>
+  </footer>
+</body>
+</html>
