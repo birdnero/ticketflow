@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Seat map for buying and reserving tickets.">
+  <title>TicketFlow | Ticket Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-body">
+  <!-- site header -->
+  <header class="site-header">
+    <div class="content-wrap header-row">
+      <a class="site-brand" href="index.html">
+        <img class="brand-logo" src="assets/ticket-wave.svg" alt="TicketFlow logo">
+        <span class="brand-name">ticketflow</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul class="main-menu">
+          <li><a class="menu-link" href="login.html">login</a></li>
+          <li><a class="menu-link" href="profile.html">profile</a></li>
+          <li><a class="menu-link" href="events.html">events</a></li>
+          <li><a class="menu-link is-active" href="event-ticket.html">ticket map</a></li>
+          <li><a class="menu-link" href="reservations.html">reservations</a></li>
+          <li><a class="menu-link" href="logout.html">logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="content-wrap stack-block">
+      <!-- ticket map hero -->
+      <section class="page-hero" aria-labelledby="map-title">
+        <div>
+          <p class="accent-chip">event details</p>
+          <h1 id="map-title" class="page-title">Rock Wave 2026 · Hall A</h1>
+          <p class="page-subtitle">Choose your preferred seats. Status markers show which seats are sold or temporarily locked by other customers.</p>
+        </div>
+      </section>
+
+      <section class="screen-grid" aria-label="Seat map and actions">
+        <!-- seats map -->
+        <article class="screen-card span-8 stack-block">
+          <h2 class="section-title">Seat map</h2>
+          <p class="card-text">Any attempt to purchase or reserve a seat in `reserved` or `sold` state is rejected.</p>
+          <div class="ticket-grid" role="list" aria-label="Row A seats">
+            <span class="ticket-seat is-available" role="listitem">A-01</span>
+            <span class="ticket-seat is-available" role="listitem">A-02</span>
+            <span class="ticket-seat is-reserved" role="listitem">A-03</span>
+            <span class="ticket-seat is-sold" role="listitem">A-04</span>
+            <span class="ticket-seat is-available" role="listitem">A-05</span>
+            <span class="ticket-seat is-available" role="listitem">A-06</span>
+            <span class="ticket-seat is-reserved" role="listitem">A-07</span>
+            <span class="ticket-seat is-available" role="listitem">A-08</span>
+            <span class="ticket-seat is-sold" role="listitem">A-09</span>
+            <span class="ticket-seat is-available" role="listitem">A-10</span>
+            <span class="ticket-seat is-available" role="listitem">A-11</span>
+            <span class="ticket-seat is-available" role="listitem">A-12</span>
+            <span class="ticket-seat is-reserved" role="listitem">A-13</span>
+            <span class="ticket-seat is-available" role="listitem">A-14</span>
+            <span class="ticket-seat is-sold" role="listitem">A-15</span>
+          </div>
+          <ul class="legend-list" aria-label="Seat color guide">
+            <li class="legend-item"><span class="legend-dot is-available" aria-hidden="true"></span>available</li>
+            <li class="legend-item"><span class="legend-dot is-reserved" aria-hidden="true"></span>reserved</li>
+            <li class="legend-item"><span class="legend-dot is-sold" aria-hidden="true"></span>sold</li>
+          </ul>
+        </article>
+
+        <!-- ticket actions -->
+        <aside class="screen-card span-4 stack-block">
+          <h2 class="section-title">Actions</h2>
+          <ul class="data-points">
+            <li class="data-point"><span class="data-point-key">selected seat</span><span class="data-point-value">A-12</span></li>
+            <li class="data-point"><span class="data-point-key">price</span><span class="data-point-value">790 ₴</span></li>
+            <li class="data-point"><span class="data-point-key">hold timer</span><span class="data-point-value">10:00</span></li>
+          </ul>
+
+          <div class="action-row">
+            <button class="btn btn-primary" type="button">buy ticket</button>
+            <button class="btn btn-secondary" type="button">reserve ticket</button>
+            <button class="btn btn-danger" type="button">cancel reservation</button>
+          </div>
+
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <!-- site footer -->
+  <footer class="app-footer">
+    <div class="content-wrap">TicketFlow Booking · Real-Time Seat Availability</div>
+  </footer>
+</body>
+</html>

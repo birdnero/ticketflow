@@ -1,0 +1,167 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.login-page-wrap {
+  position: relative;
+  padding-top: 88px;
+}
+
+.login-error-floating {
+  position: absolute;
+  top: 0;
+  left: -7%;
+  width: min(360px, calc(100% - 40px));
+  z-index: 5;
+}
+
+.login-panel-grid {
+  display: block;
+}
+
+.login-layout {
+  margin: 0 auto;
+  max-width: 520px;
+}
+
+.login-card {
+  @include m.card;
+  padding: v.$space-5;
+}
+
+.login-title {
+  margin: 0;
+  font-size: 28px;
+}
+
+.login-note {
+  margin: v.$space-1 0 0;
+  color: v.$color-text-muted;
+}
+
+.login-create-user {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(380px, calc(100% - 40px));
+  z-index: 5;
+  padding: v.$space-4;
+}
+
+.login-create-title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.login-create-form {
+  margin-top: v.$space-3;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: v.$space-3 0;
+  color: v.$color-text-muted;
+  font-size: 13px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background-color: v.$color-border;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: v.$space-3;
+}
+
+.event-card {
+  @include m.card;
+  overflow: hidden;
+  transition: transform v.$transition-medium, box-shadow v.$transition-medium;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px rgba(21, 38, 33, 0.2);
+}
+
+.event-banner {
+  min-height: 110px;
+  background:
+    linear-gradient(120deg, rgba(15, 107, 96, 0.88), rgba(217, 99, 36, 0.8)),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2) 12px,
+      transparent 12px,
+      transparent 22px
+    );
+}
+
+.event-body {
+  padding: v.$space-3;
+}
+
+.event-title {
+  margin: 0;
+  font-size: 19px;
+}
+
+.event-meta {
+  margin: v.$space-1 0 0;
+  color: v.$color-text-muted;
+  font-size: 14px;
+}
+
+.rule-card {
+  @include m.card;
+  background-color: v.$color-brand-soft;
+  border-color: #9dc9bf;
+  padding: v.$space-3;
+}
+
+.rule-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.rule-text {
+  margin: v.$space-1 0 0;
+  color: #21544d;
+}
+
+@include m.respond-tablet {
+  .login-create-user {
+    position: static;
+    width: auto;
+    margin-top: v.$space-3;
+  }
+
+  .events-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@include m.respond-mobile {
+  .login-page-wrap {
+    padding-top: 112px;
+  }
+
+  .login-error-floating {
+    width: calc(100% - 40px);
+  }
+
+  .login-card {
+    padding: v.$space-4;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Checkout screen for final ticket purchase.">
+  <title>TicketFlow | Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-body">
+  <!-- site header -->
+  <header class="site-header">
+    <div class="content-wrap header-row">
+      <a class="site-brand" href="index.html">
+        <img class="brand-logo" src="assets/ticket-wave.svg" alt="TicketFlow logo">
+        <span class="brand-name">ticketflow</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul class="main-menu">
+          <li><a class="menu-link" href="login.html">login</a></li>
+          <li><a class="menu-link" href="profile.html">profile</a></li>
+          <li><a class="menu-link" href="events.html">events</a></li>
+          <li><a class="menu-link" href="reservations.html">reservations</a></li>
+          <li><a class="menu-link is-active" href="checkout.html">checkout</a></li>
+          <li><a class="menu-link" href="logout.html">logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="content-wrap stack-block">
+      <!-- checkout hero -->
+      <section class="page-hero" aria-labelledby="checkout-title">
+        <div>
+          <p class="accent-chip">payment flow</p>
+          <h1 class="page-title" id="checkout-title">Purchase Confirmation</h1>
+          <p class="page-subtitle">Finalize your ticket payment with a clear order summary and transaction status updates.</p>
+        </div>
+      </section>
+
+      <section class="screen-grid" aria-label="Checkout summary and form">
+        <!-- order summary -->
+        <article class="screen-card span-6 stack-block">
+          <h2 class="section-title">Order summary</h2>
+          <ul class="data-points">
+            <li class="data-point"><span class="data-point-key">event</span><span class="data-point-value">Rock Wave 2026</span></li>
+            <li class="data-point"><span class="data-point-key">seat</span><span class="data-point-value">A-12</span></li>
+            <li class="data-point"><span class="data-point-key">booking fee</span><span class="data-point-value">30 ₴</span></li>
+            <li class="data-point"><span class="data-point-key">total</span><span class="data-point-value">820 ₴</span></li>
+          </ul>
+
+          <div class="alert-stack">
+            <div class="alert is-success">
+              <p class="alert-title">Payment Successful</p>
+              <p class="alert-text">Your ticket is confirmed. Seat `A-12` status has changed from `reserved` to `sold`.</p>
+            </div>
+          </div>
+
+          <div class="action-row">
+            <a class="btn btn-primary" href="reservations.html">go to my tickets</a>
+            <a class="btn btn-secondary" href="events.html">back to events</a>
+          </div>
+        </article>
+
+        <!-- payment form -->
+        <article class="screen-card span-6 stack-block">
+          <h2 class="section-title">Payment data</h2>
+          <form class="form-grid" action="#" method="post" novalidate>
+            <div class="form-field span-2">
+              <label class="field-label" for="card-holder">card holder</label>
+              <input class="form-control" id="card-holder" name="card-holder" type="text" placeholder="mark user">
+            </div>
+            <div class="form-field span-2">
+              <label class="field-label" for="card-number">card number</label>
+              <input class="form-control" id="card-number" name="card-number" type="text" placeholder="4242 4242 4242 4242">
+              <span class="form-error">Card number is invalid. Enter 16 digits without mistakes.</span>
+            </div>
+            <div class="form-field">
+              <label class="field-label" for="card-exp">expiry</label>
+              <input class="form-control" id="card-exp" name="card-exp" type="text" placeholder="08/28">
+            </div>
+            <div class="form-field">
+              <label class="field-label" for="card-cvc">cvc</label>
+              <input class="form-control" id="card-cvc" name="card-cvc" type="text" placeholder="123">
+            </div>
+            <div class="form-field span-2 action-row">
+              <button class="btn btn-primary" type="submit">pay now</button>
+              <button class="btn btn-danger" type="button">cancel booking</button>
+            </div>
+          </form>
+
+          <div class="alert-stack">
+            <div class="alert is-error">
+              <p class="alert-title">Payment declined</p>
+              <p class="alert-text">The issuing bank rejected this transaction. Try another card or contact your bank.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- site footer -->
+  <footer class="app-footer">
+    <div class="content-wrap">TicketFlow Checkout · Secure Payments and Instant Confirmation</div>
+  </footer>
+</body>
+</html>

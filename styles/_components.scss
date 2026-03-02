@@ -1,0 +1,452 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.btn {
+  cursor: pointer;
+  border: 0;
+}
+
+.btn-primary {
+  @include m.button-base(v.$color-brand, v.$color-surface, v.$color-brand);
+}
+
+.btn-secondary {
+  @include m.button-base(v.$color-surface, v.$color-brand-dark, v.$color-border);
+}
+
+.btn-danger {
+  @include m.button-base(v.$color-warning, v.$color-surface, v.$color-warning);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(16, 42, 39, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  @include m.focus-ring;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: v.$space-3;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field.span-2 {
+  grid-column: span 2;
+}
+
+.field-label {
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  font-weight: 700;
+  color: v.$color-text-muted;
+}
+
+.form-control {
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-medium;
+  padding: 11px 12px;
+  font: inherit;
+  color: v.$color-text;
+  background-color: v.$color-surface;
+  transition: border-color v.$transition-fast, box-shadow v.$transition-fast;
+}
+
+.form-control:focus-visible {
+  border-color: v.$color-brand;
+  box-shadow: 0 0 0 4px v.$color-brand-soft;
+  outline: none;
+}
+
+.form-help {
+  font-size: 12px;
+  color: v.$color-text-muted;
+}
+
+.form-error {
+  font-size: 12px;
+  color: v.$color-warning;
+  font-weight: 700;
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-2;
+  margin-top: v.$space-3;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.user-table-head {
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: v.$color-text-muted;
+}
+
+.user-table-cell {
+  padding: 12px 10px;
+  border-bottom: 1px solid v.$color-border;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: v.$radius-pill;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-badge.is-admin {
+  background-color: v.$color-brand-soft;
+  color: v.$color-brand-dark;
+}
+
+.status-badge.is-regular {
+  background-color: #ede7f7;
+  color: #5f4187;
+}
+
+.status-badge.is-paid {
+  background-color: #deefe1;
+  color: #196f3f;
+}
+
+.status-badge.is-reserved {
+  background-color: #f8e9d7;
+  color: #9a4a1a;
+}
+
+.status-badge.is-cancelled {
+  background-color: #f4dedb;
+  color: #8a2b22;
+}
+
+.alert-stack {
+  display: grid;
+  gap: v.$space-2;
+}
+
+.alert {
+  @include m.notification(v.$color-info);
+}
+
+.alert.is-error {
+  border-left-color: v.$color-warning;
+}
+
+.alert.is-success {
+  border-left-color: v.$color-success;
+}
+
+.alert-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.alert-text {
+  margin: 6px 0 0;
+  color: v.$color-text-muted;
+  line-height: 1.4;
+}
+
+.dialog-box {
+  @include m.card;
+  padding: v.$space-4;
+  margin: 0;
+}
+
+.floating-dialog {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: min(760px, calc(100% - 36px));
+  z-index: 90;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px);
+  transition: opacity v.$transition-medium, transform v.$transition-medium;
+}
+
+.floating-dialog:target {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.dialog-box-floating {
+  padding: v.$space-3;
+  overflow-x: auto;
+}
+
+.dialog-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: v.$space-2;
+}
+
+.dialog-close:link,
+.dialog-close:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid v.$color-border;
+  background-color: v.$color-surface-soft;
+  color: v.$color-text-muted;
+  font-size: 21px;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color v.$transition-fast, color v.$transition-fast;
+}
+
+.dialog-close:hover {
+  background-color: v.$color-brand-soft;
+  color: v.$color-brand-dark;
+}
+
+.dialog-close:active {
+  background-color: v.$color-brand;
+  color: v.$color-surface;
+}
+
+.dialog-form-inline {
+  margin-top: v.$space-2;
+  grid-template-columns:
+    minmax(140px, 1.2fr)
+    minmax(110px, 0.8fr)
+    minmax(140px, 1fr)
+    minmax(140px, 1fr)
+    auto;
+  gap: 10px;
+  align-items: end;
+  min-width: 680px;
+}
+
+.dialog-form-inline .form-field {
+  min-width: 0;
+}
+
+.dialog-inline-actions {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: v.$space-1;
+  white-space: nowrap;
+}
+
+.dialog-inline-actions .btn {
+  white-space: nowrap;
+}
+
+.dialog-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.dialog-note {
+  margin: v.$space-1 0 0;
+  color: v.$color-text-muted;
+}
+
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.ticket-seat {
+  position: relative;
+  min-height: 42px;
+  border-radius: v.$radius-small;
+  border: 1px solid v.$color-border;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: v.$color-surface;
+  transition: transform v.$transition-fast, border-color v.$transition-fast;
+}
+
+.ticket-seat::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: v.$color-text-muted;
+}
+
+.ticket-seat:hover {
+  transform: translateY(-2px);
+}
+
+.ticket-seat.is-available {
+  border-color: #75ba91;
+  background-color: #e8f6ed;
+}
+
+.ticket-seat.is-available::before {
+  background-color: v.$color-success;
+}
+
+.ticket-seat.is-reserved {
+  border-color: #edc18f;
+  background-color: #fff1df;
+}
+
+.ticket-seat.is-reserved::before {
+  background-color: #c0702a;
+}
+
+.ticket-seat.is-sold {
+  border-color: #d7a3a3;
+  background-color: #f8e1e1;
+  color: #8d3b3b;
+}
+
+.ticket-seat.is-sold::before {
+  background-color: v.$color-warning;
+}
+
+.legend-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-2;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.legend-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.legend-dot.is-available {
+  background-color: v.$color-success;
+}
+
+.legend-dot.is-reserved {
+  background-color: #c0702a;
+}
+
+.legend-dot.is-sold {
+  background-color: v.$color-warning;
+}
+
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: v.$space-2;
+}
+
+.timeline-item {
+  @include m.card;
+  padding: v.$space-3;
+}
+
+.timeline-item:first-child {
+  border-color: v.$color-brand;
+}
+
+.timeline-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: v.$space-2;
+}
+
+.timeline-title {
+  margin: 0;
+  font-size: 17px;
+}
+
+.timeline-meta {
+  margin: 6px 0 0;
+  color: v.$color-text-muted;
+  font-size: 14px;
+}
+
+.logout-box {
+  @include m.card;
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+  padding: v.$space-5;
+}
+
+.logout-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background-color: v.$color-brand-soft;
+  color: v.$color-brand-dark;
+}
+
+@include m.respond-mobile {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field.span-2 {
+    grid-column: span 1;
+  }
+
+  .floating-dialog {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100% - 24px);
+  }
+
+  .dialog-form-inline {
+    grid-template-columns:
+      minmax(140px, 1.2fr)
+      minmax(110px, 0.8fr)
+      minmax(140px, 1fr)
+      minmax(140px, 1fr)
+      auto;
+  }
+
+  .ticket-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

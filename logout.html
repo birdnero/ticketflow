@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Logout functionality screen.">
+  <title>TicketFlow | Logout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-body">
+  <!-- site header -->
+  <header class="site-header">
+    <div class="content-wrap header-row">
+      <a class="site-brand" href="index.html">
+        <img class="brand-logo" src="assets/ticket-wave.svg" alt="TicketFlow logo">
+        <span class="brand-name">ticketflow</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul class="main-menu">
+          <li><a class="menu-link" href="login.html">login</a></li>
+          <li><a class="menu-link" href="profile.html">profile</a></li>
+          <li><a class="menu-link" href="events.html">events</a></li>
+          <li><a class="menu-link" href="reservations.html">reservations</a></li>
+          <li><a class="menu-link is-active" href="logout.html">logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="content-wrap">
+      <!-- logout state -->
+      <section class="logout-box stack-block" aria-labelledby="logout-title">
+        <div class="logout-icon" aria-hidden="true">✓</div>
+        <h1 class="page-title" id="logout-title">You Are Signed Out</h1>
+        <p class="page-subtitle">Your session has ended successfully. Sign in again to continue booking and managing tickets.</p>
+        <div class="action-row">
+          <a class="btn btn-primary" href="login.html">sign in again</a>
+          <a class="btn btn-secondary" href="index.html">back to home</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- site footer -->
+  <footer class="app-footer">
+    <div class="content-wrap">TicketFlow Security · Safe Session Logout</div>
+  </footer>
+</body>
+</html>
