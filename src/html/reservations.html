@@ -8,14 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
 </head>
 <body class="page-body">
   <!-- site header -->
   <header class="site-header">
     <div class="content-wrap header-row">
-      <a class="site-brand" href="index.html">
-        <img class="brand-logo" src="assets/ticket-wave.svg" alt="TicketFlow logo">
+      <a class="site-brand" href="../index.html">
+        <img class="brand-logo" src="../assets/ticket-wave.svg" alt="TicketFlow logo">
         <span class="brand-name">ticketflow</span>
       </a>
       <nav aria-label="Main menu">
@@ -46,7 +46,7 @@
         <!-- reservation timeline -->
         <article class="screen-card span-8 stack-block">
           <h2 class="section-title">Reservation list</h2>
-          <ul class="timeline">
+          <ul class="timeline" id="reservation-list">
             <li class="timeline-item">
               <div class="timeline-top">
                 <h3 class="timeline-title">Rock Wave 2026 · seat A-12</h3>
@@ -82,9 +82,9 @@
         <aside class="screen-card span-4 stack-block">
           <h2 class="section-title">Summary</h2>
           <ul class="data-points">
-            <li class="data-point"><span class="data-point-key">active reservations</span><span class="data-point-value">1</span></li>
-            <li class="data-point"><span class="data-point-key">paid tickets</span><span class="data-point-value">1</span></li>
-            <li class="data-point"><span class="data-point-key">cancelled</span><span class="data-point-value">1</span></li>
+            <li class="data-point"><span class="data-point-key">active reservations</span><span class="data-point-value" id="summary-active">1</span></li>
+            <li class="data-point"><span class="data-point-key">paid tickets</span><span class="data-point-value" id="summary-paid">1</span></li>
+            <li class="data-point"><span class="data-point-key">cancelled</span><span class="data-point-value" id="summary-cancelled">1</span></li>
           </ul>
           <div class="alert-stack">
             <div class="alert is-error">
@@ -101,5 +101,6 @@
   <footer class="app-footer">
     <div class="content-wrap">TicketFlow Wallet · Reservation and Purchase Management</div>
   </footer>
+  <script src="../js/index.js"></script>
 </body>
 </html>

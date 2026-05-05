@@ -1,0 +1,17 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "test",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "src/js/index.js",
+  "scripts": {
+    "lint": "eslint **/*.js --ignore-pattern node_modules/"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1"
+  }
+}
